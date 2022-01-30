@@ -53,9 +53,9 @@ function init() {
   //   .forEach((tag) => handleLinkedStylesheet(tag));
 }
 
-const supportsContainerQueries = "container" in document.documentElement.style;
-if (!supportsContainerQueries) {
+// const supportsContainerQueries = "container" in document.documentElement.style;
+// if (!supportsContainerQueries) {
   init();
-}
+// }
 
 export { transpileStyleSheet };
