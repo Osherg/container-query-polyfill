@@ -47,11 +47,10 @@ function init() {
     const blob = new Blob([newSrc], { type: "text/css" });
     el.href = URL.createObjectURL(blob);
   }
-
-  document.querySelectorAll("style").forEach((tag) => handleStyleTag(tag));
-  document
-    .querySelectorAll("link")
-    .forEach((tag) => handleLinkedStylesheet(tag));
+  Array.from(document.querySelectorAll(".query_container")).map((element) => element.querySelector("style")).forEach((tag) => handleStyleTag(tag));
+  // document
+  //   .querySelectorAll("link")
+  //   .forEach((tag) => handleLinkedStylesheet(tag));
 }
 
 const supportsContainerQueries = "container" in document.documentElement.style;
